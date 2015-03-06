@@ -8,6 +8,6 @@
     <p>{{ cow.getName }}</p>
     <p>{{ cow.getPhone }}</p>
     <p>{{ cow.getAddress }}</p>
-    <p><a href='/'>View your list of things to do.</a></p>
+    <p><a href='/'>Back to Contact List</a></p>
 </body>
 </html>
