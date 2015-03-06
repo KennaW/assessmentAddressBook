@@ -13,10 +13,10 @@
         'twig.path' => __Dir__.'/../views'
     ));
 
-    //set home with twig
+    //set home with twig to contact list
     $app->get("/", function() use($app){
 
-        return $app['twig']->render('contact.php', array('contactList' => Contact::getAll()));
+        return $app['twig']->render('contact_list.php', array('contactList' => Contact::getAll()));
 
     });
 
