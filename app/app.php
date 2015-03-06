@@ -23,7 +23,7 @@
     //set home with twig to contact list
     $app->get("/", function() use($app){
 
-        return $app['twig']->render('contact_list.php', array('contactList' => Contact::getAll()));
+        return $app['twig']->render('contact_list.twig', array('contactList' => Contact::getAll()));
 
     });
 
@@ -35,7 +35,7 @@
     $app->post("/new_contact", function() use ($app) {
         $contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
         $contact->save();
-        return $app['twig']->render('create_contact.php', array('cow' => $contact));
+        return $app['twig']->render('create_contact.twig', array('cow' => $contact));
 
     });
 
@@ -46,7 +46,7 @@
 
     $app->post("/delete_contacts", function() use ($app){
         Contact::deleteAll();
-        return $app['twig']->render('delete_contacts.php');
+        return $app['twig']->render('delete_contacts.twig');
 
     });
 
