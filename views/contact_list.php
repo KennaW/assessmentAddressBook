@@ -15,16 +15,20 @@
 
     <h2>Add New Contact</h2>
 
-    {# new contact form, calls  #}
-
         <form action='/new_contact' method='post'>
-            <label for='description'>Name</label>
-            <input id='description' name='description' type='text'>
+            <label for='name'>Name</label>
+            <input id='name' name='name' type='text'>
+
+            <label for='phone'>Phone</label>
+            <input id='phone' name='phone' type='text'>
+
+            <label for='address'>Address</label>
+            <input id='address' name='address' type='text'>
 
             <button type='submit'>Add Task</button>
         </form>
 
-        <form action='/delete_tasks' method='post'>
+        <form action='/delete_contacts' method='post'>
             <button type='submit'>Clear</button>
         </form>
 

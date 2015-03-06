@@ -8,7 +8,7 @@
 
         //
 
-        function __construct($name, $phone="555-555-5555", $address="HERE")
+        function __construct($name, $phone, $address)
         {
             $this->name = $name;
             $this->phone = $phone;
@@ -16,10 +16,12 @@
         }
 
         //setters n getters
+        //sets must have an agreeing name
+        //sets must also declare int or string
 
-        function setName()
+        function setName($name)
         {
-            $this->name = $new_name;
+            $this->name = (string) $name;
         }
 
         function getName()
@@ -27,9 +29,9 @@
             return $this->name;
         }
 
-        function setPhone()
+        function setPhone($phone)
         {
-            $this->phone = $new_phone;
+            $this->phone = (string) $phone;
         }
 
         function getPhone()
@@ -37,9 +39,9 @@
             return $this->phone;
         }
 
-        function setAddress()
+        function setAddress($address)
         {
-            $this->address = $new_addy;
+            $this->address = (string) $address;
         }
 
         function getAddress()
