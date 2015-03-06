@@ -7,10 +7,10 @@
     session_start();
 
     //still don't quite get it, but
-    //ALL THE CONTACTS must agree with contact.php session names
+    //ALL THE CONTACTS must agree with contact.php's session function names
 
-    if (empty($_SESSION['all_the_contacts'])) {
-        $_SESSION['all_the_contacts'] = array();
+    if (empty($_SESSION['list_of_contacts'])) {
+        $_SESSION['list_of_contacts'] = array();
     }
 
     //start silex
@@ -40,7 +40,7 @@
     });
 
 
-    //delete all contacts (from the top of the class declaration) 
+    //delete all contacts (from the top of the class declaration)
     //and goto delete_contacts page
 
 

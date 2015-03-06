@@ -6,7 +6,7 @@
         private $phone;
         private $address;
 
-        //
+        //constructor to set properties
 
         function __construct($name, $phone, $address)
         {
@@ -49,22 +49,22 @@
             return $this->address;
         }
 
-        //function to save session to array
+        //method to save session to array
         function save()
         {
-            array_push($_SESSION['all_the_contacts'], $this);
+            array_push($_SESSION['list_of_contacts'], $this);
         }
 
-        //STATIC function to retrieve contacts of session array
+        //STATIC method to retrieve contacts of session array
         static function getALL()
         {
-            return $_SESSION['all_the_contacts'];
+            return $_SESSION['list_of_contacts'];
         }
 
-        //STATIC function to delete contents of array
+        //STATIC method to delete contents of array
         static function deleteALL()
         {
-            $_SESSION['all_the_contacts'] = array();
+            $_SESSION['list_of_contacts'] = array();
         }
     }
 ?>
