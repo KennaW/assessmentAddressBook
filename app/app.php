@@ -28,7 +28,7 @@
     return $app;
     $app->post("/delete_contacts", function() use ($app){
         Task::deleteAll();
-        return $app['twig']->render('delete_contacts.php')
+        return $app['twig']->render('delete_contacts.php');
 
     });
 
