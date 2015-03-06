@@ -37,4 +37,11 @@
         {
             $this->address = $new_addy;
         }
+
+        function getAddress()
+        {
+            return $this->address;
+        }
+
+        
     }
