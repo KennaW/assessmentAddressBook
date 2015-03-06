@@ -14,7 +14,10 @@
         {% endif %}
 
     <h2>Add New Contact</h2>
-        <form action='/tasks' method='post'>
+
+    {# new contact form, calls  #}
+
+        <form action='/new_contact' method='post'>
             <label for='description'>Name</label>
             <input id='description' name='description' type='text'>
 
@@ -24,6 +27,6 @@
         <form action='/delete_tasks' method='post'>
             <button type='submit'>Clear</button>
         </form>
-        
+
 </body>
 </html>

@@ -21,7 +21,15 @@
     });
 
     //create a new contact with twig
-    //$app->post("")
+    //Contact will include 'name' 'phone' and 'address'
+    //note this once working
+
+    $app->post("/new_contact", function() use ($app) {
+        $contact = new Contact($_POST['name'], $_POST['phone'], $_POST['address']);
+        $contact->save();
+        return $app['twig']->render('create_contact.php', array('contact_array' => $contact));
+
+    });
 
 
     //delete all contacts and goto delete_contacts page
